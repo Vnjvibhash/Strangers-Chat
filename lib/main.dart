@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:strangerschat/screens/home_screen.dart';
+import 'package:flutter_easyloading/flutter_easyloading.dart';
+import 'package:strangerschat/screens/login_screen.dart';
 
-void main() => runApp(const MyApp());
+void main() {
+  runApp(const MyApp());
+}
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -12,16 +15,14 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Strangers Chat',
       debugShowCheckedModeBanner: false,
-      // theme: ThemeData(
-      //   primaryColor: Colors.red, colorScheme: ColorScheme.fromSwatch().copyWith(secondary: const Color(0xFFFEF9EB)),
-      // ),
       theme: ThemeData(
         brightness: Brightness.dark,
-        primaryColor: Colors.red,
+        primaryColor: const Color(0XFFFF0E0E),
         secondaryHeaderColor: Colors.redAccent,
         fontFamily: 'Georgia',
       ),
-      home: const HomeScreen(),
+      home: const LoginScreen(),
+      builder: EasyLoading.init(),
     );
   }
 }

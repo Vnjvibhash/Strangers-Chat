@@ -169,12 +169,21 @@ class ChatScreenState extends State<ChatScreen> {
       backgroundColor: Theme.of(context).primaryColor,
       appBar: AppBar(
         backgroundColor: Colors.red,
-        title: Text(
-          widget.user.name,
-          style: const TextStyle(
-            fontSize: 20.0,
-            fontWeight: FontWeight.bold,
-          ),
+        title: Row(
+          children: <Widget>[
+            CircleAvatar(
+              radius: 12.0,
+              backgroundImage: AssetImage(widget.user.imageUrl),
+            ),
+            const SizedBox(width: 8.0),
+            Text(
+              widget.user.name,
+              style: const TextStyle(
+                fontSize: 20.0,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ],
         ),
         elevation: 0.0,
         actions: <Widget>[

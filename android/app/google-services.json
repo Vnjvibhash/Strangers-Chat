@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "647753120123",
+    "project_id": "strangers-chat-2fbe8",
+    "storage_bucket": "strangers-chat-2fbe8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:647753120123:android:7244549f0510f0bce4a5de",
+        "android_client_info": {
+          "package_name": "com.innovateria.strangerschat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "647753120123-viub4hqbqtgumk8deef26vg35928ntdj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.innovateria.strangerschat",
+            "certificate_hash": "053eb57917b3c8299b58344af9bcded8e33a7800"
+          }
+        },
+        {
+          "client_id": "647753120123-ms347n6eeqviugrfikr90l8hn7lmscrl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAZOP7udj9QzO9nlcHnUQFNU0lFkgPpAiw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "647753120123-ms347n6eeqviugrfikr90l8hn7lmscrl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

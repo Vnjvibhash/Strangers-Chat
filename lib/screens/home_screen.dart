@@ -1,8 +1,11 @@
-import 'package:flutter/material.dart';
+import 'dart:async';
 
-import '../widgets/category_selector.dart';
-import '../widgets/favorite_contacts.dart';
-import '../widgets/recent_chats.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_easyloading/flutter_easyloading.dart';
+import 'package:strangerschat/widgets/online_users.dart';
+
+import 'package:strangerschat/widgets/favorite_contacts.dart';
+import 'package:strangerschat/widgets/recent_chats.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -12,6 +15,20 @@ class HomeScreen extends StatefulWidget {
 }
 
 class HomeScreenState extends State<HomeScreen> {
+  Timer? _timer;
+  
+  @override
+  void initState() {
+    super.initState();
+    EasyLoading.addStatusCallback((status) {
+      print('EasyLoading Status $status');
+      if (status == EasyLoadingStatus.dismiss) {
+        _timer?.cancel();
+      }
+    });
+    EasyLoading.showSuccess('Use in initState');
+  }
+  
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
@@ -65,7 +82,7 @@ class HomeScreenState extends State<HomeScreen> {
                     CircleAvatar(
                       radius: 35.0,
                       backgroundImage:
-                      AssetImage('assets/images/vivekajee.png'),
+                      AssetImage('assets/images/vivek.png'),
                     ),
                     SizedBox(height: 8.0),
                     Text("Vivek Kumar",
@@ -154,7 +171,7 @@ class HomeScreenState extends State<HomeScreen> {
                 Expanded(
                   child: Container(
                     decoration: const BoxDecoration(
-                      color:  Color(0xfffff0ed),
+                      color:  Color(0XFFC0392B),
                       borderRadius: BorderRadius.only(
                         topLeft: Radius.circular(30.0),
                         topRight: Radius.circular(30.0),
@@ -170,7 +187,7 @@ class HomeScreenState extends State<HomeScreen> {
                 ),
               ],
             ),
-            const RecentChats(),
+            const OnlineUsers(),
           ],
         ),
       ),
